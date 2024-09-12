@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 #1.
@@ -19,7 +19,7 @@ missing_values = titanic.isnull().sum()
 print("\nMissing values in each column:\n", missing_values)
 
 
-# In[ ]:
+# In[2]:
 
 
 #2
@@ -37,7 +37,7 @@ print(f'Number of columns: {villagers_df.shape[1]}')
 # Variables: Variables are the columns in the dataset, representing the features of villagers (e.g., gender, species, personality).
 
 
-# In[ ]:
+# In[3]:
 
 
 #3
@@ -53,7 +53,7 @@ for column in villagers_df.columns:
     print(villagers_df[column].value_counts(), "\n")
 
 
-# In[1]:
+# In[4]:
 
 
 #4
@@ -70,7 +70,7 @@ missing_values = villagers_df.isnull().sum()
 print(missing_values)
 
 
-# In[ ]:
+# In[4]:
 
 
 #4
@@ -86,7 +86,7 @@ print(missing_values)
 #df.describe() only includes the numeric columns, hence fewer columns are reported.
 
 
-# In[ ]:
+# In[5]:
 
 
 #5
@@ -97,7 +97,7 @@ print(missing_values)
 #It requires parentheses when we call it, in order to help it process data.
 
 
-# In[ ]:
+# In[6]:
 
 
 #6
@@ -111,7 +111,7 @@ print(missing_values)
 #'max': This is the highest value in the dataset. It marks the upper end of the data range.
 
 
-# In[4]:
+# In[7]:
 
 
 #7
@@ -187,7 +187,7 @@ print("\nDataset after cleaning:")
 print(df_cleaned)
 
 
-# In[9]:
+# In[8]:
 
 
 #8 
@@ -216,13 +216,15 @@ print(embarked_fare_summary)
 #so it shows how missing values are distributed within each group rather than the entire dataset. Different groups may have different numbers of missing values,
 #which affects the count and other statistics for col2 within each group
 
-#（3）
+#（3）I input those errors in my code, and test whether chatgpt can fix it and make it working. 
+# Here are the chatgpt's resolution and my opinions
+
 # A：
-#Fix the Error: To fix this, simply add the missing import statement at the beginning of your code:
+#Fix the Error: To fix this, simply add the missing import statement at the beginning of code:
 import pandas as pd
 
 # B：
-#Correct the Typo: Check your code and correct the typo in the file name to 'titanic.csv'.
+#Correct the Typo: correct the typo in the file name to 'titanic.csv'.
 import pandas as pd
 # Correct URL or file name
 url = 'https://raw.githubusercontent.com/mwaskom/seaborn-data/master/titanic.csv'
@@ -232,7 +234,7 @@ summary = df.describe()
 print(summary)
 
 #C:
-#Correct the Variable Name: Check your code to ensure that you are using the correct variable name. In this case, change DF to df.
+#Correct the Variable Name: Check code to ensure that using the correct variable name. In this case, change DF to df.
 import pandas as pd
 
 # Load the dataset
@@ -244,15 +246,15 @@ grouped_summary = df.groupby("embarked")["fare"].describe()
 print(grouped_summary)
 
 #D
-#If your code should be pd.read_csv(url) but you accidentally write pd.read_csv(url, Python will raise a SyntaxError.
+#If code should be pd.read_csv(url) but I accidentally write pd.read_csv(url, Python will raise a SyntaxError.
 #This is because the closing parenthesis is missing.
 
 #E
 #Mistyping a Function Name:
-#If your code should be df.groupby("col1")["col2"].describe(), but you mistakenly write df.group_by("col1")["col2"].describe(), 
+#If the code should be df.groupby("col1")["col2"].describe(), but I mistakenly write df.group_by("col1")["col2"].describe(), 
 #Python will raise an AttributeError because group_by is not a valid method for a DataFrame; the correct method is groupby.
 #Mistyping a Method Name:
-#Similarly, if your code should be df.groupby("col1")["col2"].describe(), but you mistakenly write df.groupby("col1")["col2"].describle(),
+#Similarly, if the code should be df.groupby("col1")["col2"].describe(), but I mistakenly write df.groupby("col1")["col2"].describle(),
 #Python will raise an AttributeError because describle is not a valid method; the correct method is describe.
 
 #F
@@ -296,11 +298,9 @@ df = pd.read_csv(url)
 grouped_summary = df.groupby("sex")["age"].describe()
 print(grouped_summary)
 
-#in my opinion, the chatgpt is more helpful to solve the problems.
+#In my opinion, the chatgpt is more helpful to solve the problems. 
+#Because it will offer many resolutions when I have no idea about how to fix these errors, and I learnt a lot from chatgpt.
 
 
-# In[ ]:
-
-
+# In[9]:
 #9 YES
-
