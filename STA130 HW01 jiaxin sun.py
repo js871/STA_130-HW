@@ -195,7 +195,7 @@ print(df_cleaned)
 #This means all rows with the same value in col1 are put into the same group
 #["col2"]: From each group created, this selects the col2 column.
 
-get_ipython().system('pip install pandas numpy')
+!pip install pandas
 import pandas as pd
 url = 'https://raw.githubusercontent.com/mwaskom/seaborn-data/master/titanic.csv'
 df = pd.read_csv(url)
